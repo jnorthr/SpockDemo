@@ -3,90 +3,9 @@ SpockDemo
 
 A brief gradle build sample including some Java and groovy classes, then all tested with Spock test tool
 
-You only need a working java JVM on your system, version 1.5+ and you do not need to install gradle or groovy or java JDK
+You only need a working java JVM on your system, version 1.5+ and you do not need to install gradle or groovy or java JDK. All necessary source is here on github. Your system will need a 'git' tool to clone/download this full demo suite. See: http://git-scm.com/downloads  to get a client tool if you need one.
 
-From command terminal, do these commands :
-
-mkdir xxx
-cd xxx
-git clone git@github.com:jnorthr/SpockDemo.git
-cd SpockDemo
-
-gradlew tasks            // to see what tasks are available in gradle
-
-gradlew run              // run the gradle wrapper which reads the build.gradle file
-:compileJava
-:compileGroovy
-:processResources UP-TO-DATE
-:classes
-:run
-JavaSample               // since mainClassName = "JavaSample" that's what is run giving Hello World
-Hello World
-
-gradlew clean build     // recompiles everything and runs tests declared in JavaSampleTests.groovy
-:clean
-:compileJava
-:compileGroovy
-:processResources UP-TO-DATE
-:classes
-:jar
-:assemble
-:compileTestJava UP-TO-DATE
-:compileTestGroovy
-:processTestResources UP-TO-DATE
-:testClasses
-:test
-
-CourseServiceSpec > Create new course with teacher and description FAILED
-    org.spockframework.runtime.SpockComparisonFailure at groovydemoTests.groovy:19
-
-JavaSampleTests > Test 2 should getName for Andy FAILED
-    org.spockframework.runtime.ConditionNotSatisfiedError at JavaSampleTests.groovy:50
-
-JavaSampleTests > Test 3 should getName for Leanne FAILED
-    org.spockframework.runtime.ConditionNotSatisfiedError at JavaSampleTests.groovy:50
-
-JavaSampleTests > Test 4 should keep Fred FAILED
-    org.spockframework.runtime.ConditionNotSatisfiedError at JavaSampleTests.groovy:69
-
-JavaSampleTests > Test 5 should keep Andy FAILED
-    org.spockframework.runtime.ConditionNotSatisfiedError at JavaSampleTests.groovy:69
-
-JavaSampleTests > Test 6 should keep Leanne FAILED
-    org.spockframework.runtime.ConditionNotSatisfiedError at JavaSampleTests.groovy:69
-
-JavaSampleTests > Test 7 should use groovy.property logic to get name as Fred FAILED
-    org.spockframework.runtime.ConditionNotSatisfiedError at JavaSampleTests.groovy:87
-
-JavaSampleTests > Test 9 should use groovy.property logic to get name as Leanne FAILED
-    org.spockframework.runtime.ConditionNotSatisfiedError at JavaSampleTests.groovy:87
-
-JavaSampleTests > Test 10 should use groovy.property logic to get name as Fred FAILED
-    org.spockframework.runtime.ConditionNotSatisfiedError at JavaSampleTests.groovy:105
-
-JavaSampleTests > Test 11 should use groovy.property logic to get name as Andy FAILED
-    org.spockframework.runtime.ConditionNotSatisfiedError at JavaSampleTests.groovy:105
-
-JavaSampleTests > Test 12 should use groovy.property logic to get name as Leanne FAILED
-    org.spockframework.runtime.ConditionNotSatisfiedError at JavaSampleTests.groovy:105
-
-15 tests completed, 11 failed
-:test FAILED
-
-FAILURE: Build failed with an exception.
-
-* What went wrong:
-Execution failed for task ':test'.
-> There were failing tests. See the report at: file:///Volumes/PENDRIVE/gradledemo/SpockDemo/build/reports/tests/index.html
-
-/*
-
-Follow directions above to try for yourself. I left a few bugs in the test just for demo purposes. 
-
-When Spcok tests fail, Spock creates a set of html pages to describe the failures. Copy the "file:///Vol..." name into a browser address bar, press enter key to see what Spock found --- 
+Follow directions in technotes.txt file to try gradle and spock for yourself. I left a few bugs in the test just for demo purposes. 
 
 Enjoy !
-
-
-*/
 
