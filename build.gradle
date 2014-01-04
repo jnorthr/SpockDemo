@@ -1,0 +1,23 @@
+// gradledemo/build.gradle
+import org.apache.ivy.plugins.resolver.URLResolver
+import org.apache.ivy.core.report.*
+apply plugin: 'java'
+apply plugin: 'groovy'
+apply plugin: 'application'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.codehaus.groovy:groovy-all:1.8.6'
+    groovy group: 'org.apache.ivy', name:'ivy', version:'2.2.0'
+    testCompile 'org.codehaus.groovy:groovy-all:1.8.6'
+    testCompile 'org.spockframework:spock-core:0.7-groovy-1.8'
+}
+
+mainClassName = "JavaSample"
+
+task wrapper(type: Wrapper) {
+    gradleVersion '1.10'
+}
