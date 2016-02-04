@@ -99,10 +99,11 @@ class JavaSampleTests extends Specification {
 	{
 		setup:		
 			def sample = new JavaSample()
-
+			sample.setName("Leanne");
+			
     		expect:
-			// this test fails cos setName does not return a value :)
-			assert sample.getName() == sample.setName("Leanne"), "set/get name was not what we expected" 
+				// this test fails cos setName does not return a value :)
+				assert sample.getName() == data, "set/get name was not what we expected" 
 
 		where:
 		   test | data 

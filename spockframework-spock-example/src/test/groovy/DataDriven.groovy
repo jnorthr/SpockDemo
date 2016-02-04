@@ -50,7 +50,7 @@ class DataDriven extends Specification {
   }
 }
 
-private class Person {
+class Person {
   String name
   String getSex() {
     name == "Fred" ? "Male" : "Female"

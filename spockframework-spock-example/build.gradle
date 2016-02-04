@@ -3,8 +3,8 @@ apply plugin: "groovy"
 version = "0.6"
 description = "Spock Framework - Example Project"
 
-// Spock works with Java 1.5 and above
-sourceCompatibility = 1.5
+// Spock works with Java 1.6 and above
+sourceCompatibility = 1.6
 
 repositories {
   // Spock releases are available from Maven Central
@@ -15,8 +15,8 @@ repositories {
 
 dependencies {
   // mandatory dependencies for using Spock
-  groovy "org.codehaus.groovy:groovy-all:1.8.6"
-  testCompile "org.spockframework:spock-core:0.6-groovy-1.8"
+  compile "org.codehaus.groovy:groovy-all:2.4.5"
+  testCompile "org.spockframework:spock-core:1.0-groovy-2.4"
 
   // optional dependencies for using Spock
   testCompile "org.hamcrest:hamcrest-core:1.2" // only necessary if Hamcrest matchers are used
@@ -37,6 +37,6 @@ task collectJars(type: Copy) {
 }
 
 task wrapper(type: Wrapper) {
-  gradleVersion = "1.0-milestone-9"
+  gradleVersion = "2.10"
 }
 

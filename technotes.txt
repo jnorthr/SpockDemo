@@ -3,7 +3,7 @@ SpockDemo
 
 A brief gradle build sample including some Java and groovy classes, then all tested with Spock test tool
 
-You only need a working java JVM on your system, version 1.5+ and you do not need to install gradle or groovy or java JDK
+You only need a working java JVM on your system, version 1.6+ and you do not need to install gradle or groovy or java JDK
 
 From command terminal, do these commands :
 
