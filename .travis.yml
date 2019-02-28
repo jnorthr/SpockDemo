@@ -1,0 +1,17 @@
+language: groovy
+jdk:
+- oraclejdk8
+- openjdk8
+before_install:
+- chmod +x gradlew
+deploy:
+  edge: true
+  provider: cloudfoundry
+  api: https://api.aws.ie.a9s.eu
+  username: j.northrop@hotmail.com
+  password:
+    secure: 
+  organization: james_b_northrop_googlemail_com
+  space: test
+  on:
+    repo: jnorthr/ConfigSlurper
